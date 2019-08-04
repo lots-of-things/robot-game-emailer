@@ -20,8 +20,7 @@ def send_message(service, to, subject, message_body='', dryrun=True):
     try:
         message = MIMEText(message_body)
         message['to'] = to
-        message['from'] = 'robot-db
-@gmail.com'
+        message['from'] = 'robot-db@gmail.com'
         message['subject'] = subject
         encoded_message = urlsafe_b64encode(message.as_bytes())
         print(message)
